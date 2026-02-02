@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 25px;
+  border: 5px solid #667eea;
+  object-fit: cover;
+}
+
+.profile-card h2 {
+  color: #2d3748;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.info-section {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 16px;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #718096;
+  font-weight: 500;
+}
+
+.info-value {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px auto;
+  display: block;
+  width: fit-content;
+}
+
+.greeting {
+  text-align: center;
+  color: #667eea;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.section-title {
+  color: #2d3748;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 25px 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #667eea;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.calc-item {
+  background: #f7fafc;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.calc-item:hover {
+  border-color: #667eea;
+  transform: scale(1.05);
+}
+
+.calc-item p {
+  color: #2d3748;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hobbies-list {
+  background: #f7fafc;
+  padding: 15px;
+  border-radius: 10px;
+  color: #2d3748;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+}
