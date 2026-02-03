@@ -8,7 +8,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
-  padding: 20px;
 }
 
 .App {
@@ -16,17 +15,49 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  color: white;
+/* Header Styles */
+.header {
+  background-color: #2d3748;
+  padding: 25px;
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 48px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+.header h1 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 32px;
+  margin: 0;
+}
+
+.header nav {
+  margin-top: 15px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 16px;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.header nav a:hover {
+  color: #667eea;
+}
+
+/* Welcome, Greeting, Info - Hide them or style nicely */
+.App > h1,
+.App > h2,
+.App > p {
+  display: none; /* Hiding these as they clutter the design */
+}
+
+/* Profile Card */
 .profile-card {
-  max-width: 450px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 40px auto;
   padding: 40px;
   background: white;
   border-radius: 20px;
@@ -87,16 +118,16 @@ h1 {
 }
 
 .badge {
-  display: inline-block;
-  padding: 8px 20px;
+  display: block;
+  padding: 10px 25px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border-radius: 25px;
   font-size: 14px;
   font-weight: 600;
-  margin: 10px auto;
-  display: block;
+  margin: 15px auto;
   width: fit-content;
+  text-align: center;
 }
 
 .greeting {
@@ -153,4 +184,67 @@ h1 {
   font-size: 16px;
   text-align: center;
   font-weight: 500;
+}
+
+/* Card Container - Makes cards side by side */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: #667eea;
+}
+
+.card h3 {
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.card p {
+  color: #718096;
+  line-height: 1.6;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2d3748;
+  padding: 30px;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+  color: white;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
 }

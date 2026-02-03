@@ -1,8 +1,15 @@
 import { useState } from 'react'
-
+import Greeting from './components/Greeting';
+import Info from './components/Info';
+import Welcome from './components/Welcome';
 import './App.css'
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Card from './components/Card';
+
 
 function App() {
+  
   const name = "Ram";
   const last = "Singh";
   const age = 20;
@@ -15,7 +22,7 @@ function App() {
   const arrHobbies = ["Gym", "Cricket", "Singing"];
   const fullName = `${name} ${last}`;
   
-  const Greeting = () => {
+  const GetTimeGreeting = () => {
     const time = new Date().getHours();
     if(time < 12){
       return "Good Morning ☀️"
@@ -26,9 +33,16 @@ function App() {
     }
   }
 
+  <Card/>
+  
+
   return (
     <div className="App">
-      <h1>Welcome to React</h1>
+       <Header/>
+
+       <Welcome/>
+       <Greeting/>
+       <Info/>
       
       <div className='profile-card'>
         <img src='https://via.placeholder.com/150' alt='profile'/>
@@ -53,7 +67,7 @@ function App() {
           {isStudent ? "🎓 Student" : "💼 Professional"}
         </span>
         
-        <p className="greeting">{Greeting()}</p>
+        <p className="greeting">{GetTimeGreeting()}</p>
         
         <h4 className="section-title">Calculator</h4>
         <div className="calculator-grid">
@@ -76,6 +90,15 @@ function App() {
           {arrHobbies.join(" • ")}
         </div>
       </div>
+      <div className="cards-container">
+          <Card
+          title="React Basics"
+          description ="Learning JSX, components, and props"/>
+          <Card/>
+          <Card/>
+          </div>
+
+           <Footer/>
     </div>
   )
 }
