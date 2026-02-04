@@ -94,8 +94,12 @@ function App() {
           <Card
           title="React Basics"
           description ="Learning JSX, components, and props"/>
-          <Card/>
-          <Card/>
+          <Card
+          title ="State Management"
+          description ="Coming up next with useState hook!"/>
+          <Card
+          title="Styling" 
+          description="Making beautiful UIs with CSS"/>
           </div>
 
            <Footer/>
