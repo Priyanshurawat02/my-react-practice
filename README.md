@@ -1,16 +1,39 @@
-# React + Vite
+# My First React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal profile application built while learning React fundamentals.
 
-Currently, two official plugins are available:
+## 🎯 What I Learned
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Day 1-2: React Fundamentals & Components
+- ✅ React project setup with Vite
+- ✅ JSX syntax and expressions
+- ✅ JavaScript in JSX with curly braces `{}`
+- ✅ Creating functional components
+- ✅ Component organization and file structure
+- ✅ Importing and exporting components
+- ✅ Props basics (making components reusable)
+- ✅ Styling with CSS and inline styles
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Profile Card**: Displays personal information dynamically
+  - Name, age, birth year calculation
+  - City and student/professional status
+  - Dynamic greeting based on time of day
+  - Built-in calculator
+  - Hobbies display
 
-## Expanding the ESLint configuration
+- **Components Built**:
+  - Header with navigation
+  - Footer with dynamic year
+  - Reusable Card components
+  - Welcome, Greeting, and Info components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies
+
+- React 18
+- Vite
+- CSS3
+
+## 📦 Installation
+```bash
