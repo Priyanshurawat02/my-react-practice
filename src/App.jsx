@@ -6,7 +6,10 @@ import './App.css'
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Card from './components/Card';
-
+import Counter from './Counter';
+import Toggle from './Toggle';
+import ThemeSwitcher from './ThemeSwitcher';
+import TextDisplay from './TextDisplay';
 
 function App() {
   
@@ -33,17 +36,14 @@ function App() {
     }
   }
 
-  <Card/>
-  
-
   return (
     <div className="App">
-       <Header/>
-
-       <Welcome/>
-       <Greeting/>
-       <Info/>
+      <Header/>
+      <Welcome/>
+      <Greeting/>
+      <Info/>
       
+      {/* Profile Card - FIXED: All content inside one div */}
       <div className='profile-card'>
         <img src='https://via.placeholder.com/150' alt='profile'/>
         <h2>{fullName}</h2>
@@ -90,19 +90,39 @@ function App() {
           {arrHobbies.join(" • ")}
         </div>
       </div>
-      <div className="cards-container">
-          <Card
-          title="React Basics"
-          description ="Learning JSX, components, and props"/>
-          <Card
-          title ="State Management"
-          description ="Coming up next with useState hook!"/>
-          <Card
-          title="Styling" 
-          description="Making beautiful UIs with CSS"/>
-          </div>
+      {/* Profile Card ends here */}
 
-           <Footer/>
+      {/* Cards Section */}
+      <div className="cards-container">
+        <Card
+          title="React Basics"
+          description="Learning JSX, components, and props"
+        />
+        <Card
+          title="State Management"
+          description="Coming up next with useState hook!"
+        />
+        <Card
+          title="Styling" 
+          description="Making beautiful UIs with CSS"
+        />
+      </div>
+
+      {/* Interactive Components Section */}
+      <div className="interactive-section">
+        <h2 style={{ color: 'white', textAlign: 'center', marginBottom: '30px' }}>
+          Interactive Components
+        </h2>
+        
+        <div className="components-grid">
+          <Counter />
+          <Toggle />
+          <ThemeSwitcher />
+          <TextDisplay />
+        </div>
+      </div>
+
+      <Footer/>
     </div>
   )
 }

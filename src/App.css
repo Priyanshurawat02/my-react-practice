@@ -248,3 +248,85 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Interactive Section */
+.interactive-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.components-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Style for each interactive component */
+.components-grid > div {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Component headings */
+.components-grid h3 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.components-grid h2 {
+  color: #2d3748;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.components-grid p {
+  color: #4a5568;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.components-grid input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 2px solid #e2e8f0;
+  font-size: 16px;
+}
+
+.components-grid input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.components-grid button {
+  margin: 5px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #667eea;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.components-grid button:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .components-grid {
+    grid-template-columns: 1fr;
+  }
+}
