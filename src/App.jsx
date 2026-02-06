@@ -10,6 +10,7 @@ import Counter from './Counter';
 import Toggle from './Toggle';
 import ThemeSwitcher from './ThemeSwitcher';
 import TextDisplay from './TextDisplay';
+import Calulator from './Calulator';
 
 function App() {
   
@@ -113,6 +114,8 @@ function App() {
         <h2 style={{ color: 'white', textAlign: 'center', marginBottom: '30px' }}>
           Interactive Components
         </h2>
+
+        <Calulator/>
         
         <div className="components-grid">
           <Counter />
