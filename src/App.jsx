@@ -11,6 +11,7 @@ import Toggle from './Toggle';
 import ThemeSwitcher from './ThemeSwitcher';
 import TextDisplay from './TextDisplay';
 import Calulator from './Calulator';
+import TodoItem from './TodoItem';
 
 function App() {
   
@@ -122,6 +123,7 @@ function App() {
           <Toggle />
           <ThemeSwitcher />
           <TextDisplay />
+          <TodoItem/>
         </div>
       </div>
 
