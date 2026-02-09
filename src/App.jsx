@@ -12,6 +12,10 @@ import ThemeSwitcher from './ThemeSwitcher';
 import TextDisplay from './TextDisplay';
 import Calulator from './Calulator';
 import TodoItem from './TodoItem';
+import NameList from './NameList';
+import ProductList from './ProductList';
+import KeyExample from './KeyExample';
+import TodoList from './TodoList';
 
 function App() {
   
@@ -124,6 +128,10 @@ function App() {
           <ThemeSwitcher />
           <TextDisplay />
           <TodoItem/>
+          <NameList/>
+          <ProductList/>
+          <KeyExample/>
+          <TodoList/>
         </div>
       </div>
 
