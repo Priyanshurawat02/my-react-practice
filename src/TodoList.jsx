@@ -35,25 +35,45 @@ export default function TodoList() {
     }
 
     return (
-        <div>
-            <h3>My Todo List</h3>
-            <div>
-                <input type="text" 
-                value={inputText} 
-                onChange={(e) =>setInputText(e.target.value)}
-                placeholder="Enter a todo..."></input>
-                <button onClick={handleAdd}>Add</button>
-            </div>
-            {todos.map((todo) => (
-                <div key={todo.id}>
-                <input type="checkbox" checked={todo.completed}
-                onChange={()=>handleToggle(todo.id)}></input>
-                <span  style ={{textDecoration: todo.completed ? "line-through":"none"}}>
-                    {todo.text}
-                </span>
-            <button onClick={()=>handleDelete(todo.id)}>Delete</button>
-            </div>
-            ))}
+  <div className="todo-container">
+    <h3 className="todo-heading">My Todo List</h3>
+    
+    <div className="todo-input-section">
+      <input 
+        type="text" 
+        value={inputText} 
+        onChange={(e) => setInputText(e.target.value)}
+        placeholder="Enter a todo..."
+        className="todo-input"
+      />
+      <button onClick={handleAdd} className="todo-add-btn">
+        Add
+      </button>
+    </div>
+    
+    {todos.length === 0 ? (
+      <p className="todo-empty">No todos yet. Add one above! 🎯</p>
+    ) : (
+      todos.map((todo) => (
+        <div key={todo.id} className="todo-item">
+          <input 
+            type="checkbox" 
+            checked={todo.completed}
+            onChange={() => handleToggle(todo.id)}
+            className="todo-checkbox"
+          />
+          <span className={`todo-text ${todo.completed ? 'completed' : 'active'}`}>
+            {todo.text}
+          </span>
+          <button 
+            onClick={() => handleDelete(todo.id)}
+            className="todo-delete-btn"
+          >
+            🗑️
+          </button>
         </div>
-    )
+      ))
+    )}
+  </div>
+)
 }
