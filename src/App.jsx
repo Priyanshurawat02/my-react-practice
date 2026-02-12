@@ -17,6 +17,7 @@ import ProductList from './ProductList';
 import KeyExample from './KeyExample';
 import TodoList from './TodoList';
 import ShoppingCart from './ShoppingCart';
+import ContactForm from './ContactForm';
 
 function App() {
   
@@ -134,6 +135,7 @@ function App() {
           <KeyExample/>
           <TodoList/>
           <ShoppingCart/>
+          <ContactForm/>
         </div>
       </div>
 

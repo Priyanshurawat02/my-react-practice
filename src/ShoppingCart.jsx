@@ -9,7 +9,7 @@ export default function ShoppingCart (){
     ]);
 
 
-    const increaseQuanity= (id) =>{
+    const increaseQuantity= (id) =>{
         setCartItems (
             cartItems.map((item) =>
             item.id === id
@@ -18,7 +18,7 @@ export default function ShoppingCart (){
         );
     }
 
-    const decreaseQuanity =(id) =>{
+    const decreaseQuantity =(id) =>{
         setCartItems (
             cartItems.map((item) =>
                 item.id ===id && item.quantity > 1
@@ -42,9 +42,9 @@ export default function ShoppingCart (){
                     <h4>{item.name}</h4>
                     <p>${item.price}</p>
                     <p>{item.quantity}</p>
-                    <p>SubTotal: {item.price * item.quantity}</p>
-                   <button onClick={() => decreaseQuanity(item.id)}>Decrease</button>
-                    <button onClick={() =>increaseQuanity(item.id)}>Increase</button>
+                    <p>{cartItems.reduce((total,item) => total + (item.price * item.quantity), 0)}</p>
+                   <button onClick={() => decreaseQuantity(item.id)}>Decrease</button>
+                    <button onClick={() =>increaseQuantity(item.id)}>Increase</button>
                     <button onClick={() =>Remove(item.id)}>Remove</button>
                 </div>
             ))}
