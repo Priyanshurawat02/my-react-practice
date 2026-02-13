@@ -31,12 +31,16 @@ export default function ContactForm() {
             setSubmitted(false);  
             } else {
                 setErrors({});
-                setSubmitted(true);   
+                setSubmitted(true);  
+                setNames("");
+                setEmails("");
+                setMessages(""); 
              }
     }
 
     return(
         <div>
+            <form onSubmit={handleSubmit}>
             <label>Name:</label>
             <input placeholder="Enter your name" 
             type="text" 
@@ -62,7 +66,7 @@ export default function ContactForm() {
 
             {submitted && <p>Thank you {names}! We'll contact you at {emails}</p>}
 
-           <form onSubmit={handleSubmit}> <button type="submit">Submit</button></form>
+            <button type="submit">Submit</button></form>
         </div>
     )
 }
