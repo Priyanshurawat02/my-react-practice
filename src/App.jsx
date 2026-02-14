@@ -19,6 +19,8 @@ import TodoList from './TodoList';
 import ShoppingCart from './ShoppingCart';
 import ContactForm from './ContactForm';
 import RegistrationForm from './RegistrationForm';
+import SurveyForm from './SurveyForm';
+
 
 function App() {
   
@@ -138,6 +140,7 @@ function App() {
           <ShoppingCart/>
           <ContactForm/>
           <RegistrationForm/>
+          <SurveyForm/>
         </div>
       </div>
 
